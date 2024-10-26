@@ -7,7 +7,7 @@ int main() {
     scanf("%d",&firstNum);
     printf("Enter the Last Number: ");
     scanf("%d",&lastNum);
-    
+    int count=0;
     for(int i=firstNum; i<= lastNum; i++){
         bool prime = true;
         for(int j=2;j<=sqrt(i);j++){
@@ -15,12 +15,12 @@ int main() {
                 prime  = false;
                 break;
             }
-        }
-       
+        }       
         if(prime){
-            printf(" %d is Prime Number\n",i);
+           count++;
         }
     }
+    printf("Total number of prime numbers between %d and %d is: %d",firstNum,lastNum,count);
     return 0;
 }
 
